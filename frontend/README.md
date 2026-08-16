@@ -1,96 +1,16 @@
-# Frontend - React UI
+# React + Vite
 
-Forum platformunun React ile yazılmış frontend uygulaması.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Başlangıç
+Currently, two official plugins are available:
 
-### Gereksinimler
-- Node.js 14+ ve npm (veya yarn)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-### Kurulum Adımları
+## React Compiler
 
-1. **Bağımlılıkları Yükle:**
-```bash
-npm install
-```
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-2. **.env Dosyası Oluştur:**
-```bash
-cp .env.example .env
-```
+## Expanding the ESLint configuration
 
-3. **Geliştirme Sunucusu Başlat:**
-```bash
-npm start
-```
-
-Uygulama şu adresde açılacak: `http://localhost:3000`
-
-## 📁 Proje Yapısı
-
-```
-frontend/
-├── public/           # Statik dosyalar
-├── src/
-│   ├── components/   # Reusable bileşenler
-│   ├── pages/        # Sayfalar
-│   ├── services/     # API çağrıları
-│   ├── context/      # Global state
-│   ├── styles/       # CSS dosyaları
-│   ├── App.js
-│   └── index.js
-├── package.json
-└── README.md
-```
-
-## 📦 Başlıca Bileşenler
-
-### Sayfalar
-- **HomePage** - Anasayfa (Thread listesi)
-- **ThreadDetail** - Thread detay sayfası
-- **UserProfile** - Kullanıcı profili
-- **Login** - Giriş sayfası
-- **Register** - Kayıt sayfası
-
-### Bileşenler
-- **Header** - Üst navigasyon
-- **ThreadCard** - Thread kartı
-- **CommentList** - Yorum listesi
-- **Footer** - Alt bilgi
-
-## 🔌 API Entegrasyonu
-
-Tüm API çağrıları `src/services/api.js` içinde tanımlanır:
-
-```javascript
-// Örnek API çağrısı
-import { fetchThreads } from './services/api';
-
-const threads = await fetchThreads();
-```
-
-## 🎨 Stil
-
-CSS dosyaları `src/styles/` klasöründe saklanır. BEM metodolojisini kullanıyoruz.
-
-## 📚 Kaynaklar
-
-- [React Dokümentasyonu](https://react.dev/)
-- [React Router](https://reactrouter.com/)
-- [Axios](https://axios-http.com/)
-
-## 🚀 Build
-
-Production build oluşturmak için:
-
-```bash
-npm run build
-```
-
-Bu, optimized dosyaları `build/` klasörüne yerleştirir.
-
-## 📝 Konvansiyon
-
-- Component isimleri PascalCase (MyComponent.js)
-- Dosya adları kebab-case (my-component.js)
-- Stil dosyaları component ile aynı klasörde
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
